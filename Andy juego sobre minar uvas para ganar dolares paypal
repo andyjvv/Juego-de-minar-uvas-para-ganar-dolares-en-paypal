@@ -1,0 +1,38 @@
+//Inicializar variables
+var uvas = 0;
+var dinero = 0;
+var nivel = 1;
+
+//Funcion para minar uvas
+function minarUvas(){
+    uvas += 1;
+    console.log("Uvas minadas: "+uvas);
+}
+
+//Funcion para calcular dinero ganado
+function calcularDinero(){
+    dinero = uvas * nivel;
+    console.log("Dinero ganado: "+dinero);
+}
+
+//Funcion para subir de nivel
+function subirNivel(){
+    nivel += 1;
+    console.log("Nivel subido: "+nivel);
+}
+
+//Funcion para retirar dinero a Paypal
+function retirarDinero(){
+    //Codigo para realizar el retiro a Paypal
+    console.log("Retiro realizado a Paypal");
+}
+
+//Loop principal
+while(true){
+    minarUvas();
+    calcularDinero();
+    if(dinero > 100){
+        subirNivel();
+        retirarDinero();
+    }
+}
